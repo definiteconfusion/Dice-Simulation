@@ -1,10 +1,11 @@
-import dataManagement
-import loops
-import graph
+from Compiler import trial
+#
+# 
+# -- Data
+Number_Of_Trials = 50000
+Population = 200
 
-
-graph.plot_bar_graph(
-    dataManagement.count_numbers(
-        loops.dataSet(50000,100), 200
-        )
-    )
+#
+#
+# -- Function Execute
+trial(Number_Of_Trials, Population)
