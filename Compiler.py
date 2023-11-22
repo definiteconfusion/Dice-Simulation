@@ -5,12 +5,15 @@ import click
 
 def trial(trial:int, population:int):
     
-    dataset = dataManagement.count_numbers(loops.dataSet(trial,population), population * 2)
+    mangementlst = dataManagement.count_numbers(loops.dataSet(trial,population), population * 2)   
     
+    dataset = mangementlst[0]
+    likelyNum = mangementlst[1]
+    numDex = mangementlst[2]
+    elevenData = mangementlst[3]
     
-    click.secho(f'σ = {dataset[1]} \n μ = {dataset[0]}', bg='blue')
-    
+    click.secho(f"AVG Rounds: {numDex} \n NMBR Occurrences: {likelyNum} \n \n RND Eleven: {elevenData}", fg='blue')
     
     graph.plot_bar_graph(
-        dataset[4]
+        dataset
         )
