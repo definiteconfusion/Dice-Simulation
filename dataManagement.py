@@ -9,5 +9,21 @@ def count_numbers(input_list, listMax):
     for cleanup in range(len(counts)):
         if cleanup > 100:
             counts.pop(101)
+    import pandas as pd
+    counts_series = pd.Series(counts)
+
+# Calculate median and quartiles
+    median = counts_series.median()
+    first_quartile = counts_series.quantile(0.25)
+    third_quartile = counts_series.quantile(0.75)
+    standard_deviation = counts_series.std()
+
+    lst = [
+        median,
+        standard_deviation,
+        first_quartile,
+        third_quartile,
+        counts
+    ]
     
-    return counts
+    return lst
