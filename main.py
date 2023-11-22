@@ -5,6 +5,6 @@ import graph
 
 graph.plot_bar_graph(
     dataManagement.count_numbers(
-        loops.dataSet(50000,100), 200
+        loops.dataSet(5000,100),5000
         )
     )
