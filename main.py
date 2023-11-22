@@ -2,7 +2,7 @@ from Compiler import trial
 #
 # 
 # -- Data
-Number_Of_Trials = 1000000
+Number_Of_Trials = 1000
 Population = 15
 
 #
